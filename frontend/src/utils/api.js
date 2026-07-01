@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'https://smart-task-manager-u1pv.onrender.com'
 });
 
 // Request bhejte waqt automatic token attach karne ka tarika (Interceptors)
