@@ -1,4 +1,4 @@
-require('dotenv').config(); // <-- Yeh line aapki sabse upar honi chahiye
+require('dotenv').config(); // Yeh line sabse upar honi chahiye
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
@@ -16,9 +16,9 @@ app.use(express.json());
 // Database Connect
 connectDB();
 
-// Routes use
-app.use('/api/tasks', taskRoutes);
-app.use('/api/auth', authRoutes);
+// Routes use (Prefix se /api hata diya gaya hai)
+app.use('/tasks', taskRoutes);
+app.use('/auth', authRoutes);
 
 const PORT = 5000;
 app.listen(PORT, () => {
